@@ -21,7 +21,11 @@ const userSchema = new Schema({
   },
   profileImg: {
     type: String,
-    default: ''
+    default: 'https://cdn1.iconfinder.com/data/icons/runes-vikings/205/ThorHammer-512.png'
+  },
+  goldImg: {
+    type: String,
+    default: 'https://cdn0.iconfinder.com/data/icons/finance-colored-outlined-pixel-perfect/64/finance-20-512.png'
   }
 });
 const User = mongoose.model('User', userSchema);

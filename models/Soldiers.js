@@ -6,13 +6,13 @@ const soldierSchema = new Schema({
     required: true,
     unique: true
   },
-  soldiers: {
-    type: Array,
+  price: {
+    type: Number,
     required: true
   },
-  idUser: {
-      type: String,
-      required: true
+  logo: {
+    type: String,
+    required: true
   }
 });
 const Soldier = mongoose.model('Soldier', soldierSchema);
