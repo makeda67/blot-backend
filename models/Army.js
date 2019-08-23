@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId;
 const armySchema = new Schema({
   name: {
     type: String,
@@ -10,7 +11,7 @@ const armySchema = new Schema({
       type:Array,
       default:
       [{
-          name:'Archer',
+            name:'Archer',
             img: 'https://fireemblemwiki.org/w/images/0/0c/Bs_fe08_innes_sniper_bow.png',
             price: 30,
             quantity: 0,
@@ -39,10 +40,6 @@ const armySchema = new Schema({
         }]
     },
         
-        idUser: {
-            type: String,
-            required: true
-        }
     });
     const Army = mongoose.model('Army', armySchema);
     module.exports = Army;
